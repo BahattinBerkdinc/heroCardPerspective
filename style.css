@@ -1,0 +1,130 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'AVENGEANCE-HEROIC-AVENGER-AT-BF63e1a408c1d94', sans-serif;;
+}
+
+.hero-main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.hero-main h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+
+.hero-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4rem;
+    perspective: 1000px;
+}
+
+.hero-card {
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 500ms ease;
+    transform-style: preserve-3d;
+    position: relative;
+    
+}
+
+.hero-card .logo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(100px);
+    rotate: x -30deg;
+    z-index: 999999;
+    display: none;
+}
+
+.hero-card:hover .logo{
+    display: flex;
+}
+
+.hero-card .logo img {
+   width: 100%;
+   object-fit: cover;
+}
+
+.hero-card.hero-card.spiderman .logo,
+.hero-card.hero-card.captain .logo {
+    left: 0;
+}
+
+
+.hero-card.iron{
+    background-image: url("ironmanback.jpeg");
+}
+.hero-card.iron::after{
+    background-image: url(ironmanfront.png);
+}
+.hero-card.spiderman{
+    background-image: url("spidermanback.png");
+}
+.hero-card.spiderman::after{
+    background-image: url(spidermanfront.png);
+}
+.hero-card.captain{
+    background-image: url("captainamericaback.jpeg");
+}
+.hero-card.captain::after{
+    background-image: url(captainamericafront.png);
+    background-size: 250px;
+}
+
+.hero-card:hover{
+    rotate: x 30deg;
+    box-shadow: black 0 0 200px inset, 0px 20px 50px 5px black;
+    cursor: pointer;
+}
+
+.hero-card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: center;
+    border-radius: 10px;
+    transform: translateZ(300px) ;
+    rotate: x -30deg;
+    transition: all 200ms ease;
+    z-index: 1;
+    display: none;
+    filter: drop-shadow(5px 5px 10px black);
+    
+}
+
+.hero-card:hover::after{
+    display: flex;
+}
+
+
