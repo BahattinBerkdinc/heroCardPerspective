@@ -7,13 +7,24 @@
 }
 
 body{
-    height: 100vh;
-    overflow-x: hidden;
-    font-family: 'AVENGEANCE-HEROIC-AVENGER-AT-BF63e1a408c1d94', sans-serif;;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+overflow-x: hidden;
+
+background: #741212;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right,  #741212,#1f2f7d);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right,#741212, #1f2f7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
 }
 
+
 .hero-main{
-    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -21,11 +32,16 @@ body{
     gap: 4rem;
 }
 
-.hero-main h1{
-    font-size: 5rem;
-    text-transform: uppercase;
-    letter-spacing: 20px;
+@media screen and (max-width:800px) {
+    .hero-main{
+        padding-top: 20rem;
+        padding-bottom: 20rem;
+    }
+
+    
 }
+
+
 
 .hero-group{
     width: 100%;
@@ -102,7 +118,7 @@ body{
 
 .hero-card:hover{
     rotate: x 30deg;
-    box-shadow: black 0 0 200px inset, 0px 20px 50px 5px black;
+    box-shadow: black 0 0 500px inset, 0px 20px 50px 5px black;
     cursor: pointer;
 }
 
